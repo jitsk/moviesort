@@ -2,9 +2,9 @@ import os
 import shutil
 from guessit import guessit
 
-MOVIEDB = '/home/user/Videos'
+MOVIEDB = os.environ['HOME'] + '/Videos'
 
-VET = '/home/user/Vet'
+VET = os.makedirs(os.environ['HOME'] + '/lft4hdj')
 
 
 def find(folder):
@@ -35,3 +35,4 @@ def moveDataAndDeleteFolder(moviefolder, destinationDir):
     shutil.rmtree(moviefolder)
 
 find(VET)
+shutil.rmtree(os.environ['HOME'] + '/lft4hdj')
